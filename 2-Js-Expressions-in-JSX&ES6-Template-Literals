@@ -1,0 +1,62 @@
+////////////index.js///////////
+/Create a react app from scratch.
+//It should display 2 paragraph HTML elements.
+//The paragraphs should say:
+//Hello your name 
+// your lucky number(7+3*4)
+
+import React from "react";
+import ReactDom from "react-dom";
+
+const firstname = "jatin";
+const lasttname = "sharma";
+const num = 7;
+ReactDom.render(
+<div>
+<h1>hello {firstname} {lasttname} </h1>
+<p> Your lucky number is  {num + 3*4} </p> 
+</div>, document.getElementById("root"));
+
+//ES6 template literal 
+import React from "react";
+import ReactDom from "react-dom";
+
+const firstname = "jatin";
+const lasttname = "sharma";
+const num = 7;
+ReactDom.render(
+<div>
+<h1>hello {`${firstname} $ {lasttname}` </h1>
+<p> Your lucky number is  {num + 3*4} </p> 
+</div>, document.getElementById("root"));
+
+
+/////assigment///////
+//Create a react app from scratch.
+//It should display 2 paragraph HTML elements.
+//The paragraphs should say:
+//Created by YOURNAME.
+//Copyright CURRENTYEAR.
+//E.g.
+//Created by luffy.
+//Copyright @luffy.
+
+import React from "react";
+import ReactDom from "react-dom";
+
+const firstname = "jatin";
+const lasttname = "sharma";
+//To get the current year, you can call the getFullYear() method will 
+//return the year of the specified Date according to local time.
+//The value returned by is an absolute number. 
+let date = new Date().getFullYear(); //javascript 
+
+ReactDom.render(
+  <div>
+    <h1>
+      Created by {firstname} {lasttname}{" "}
+    </h1>
+    <p> Copyright {date} </p>
+  </div>,
+  document.getElementById("root")
+);
