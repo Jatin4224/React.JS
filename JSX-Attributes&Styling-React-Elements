@@ -1,0 +1,34 @@
+/////index.js//////////
+import React from "react";
+import ReactDOM from "react-dom";
+const img = "https://picsum.photos/200/300";
+ReactDOM.render(
+  <div>
+    <h1 className="heading">My favourite foods</h1>
+    <img src={img + "?grayscale"}></img>
+  </div>,
+  document.getElementById("root")
+);
+
+////styles.css//////
+.heading {
+  color: blueviolet;
+}
+.food-img {
+  height: 100px;
+  width: 100px;
+}
+
+////index.html//////
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="../src/index.js" type="text/javascript"></script>
+  </body>
+</html>
